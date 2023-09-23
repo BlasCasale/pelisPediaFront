@@ -1,0 +1,34 @@
+html {
+    font-size: 62, 5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3 {
+    color: $quinto;
+}
+
+#app {
+    background-color: $primero;
+    @include flexColCenCen;
+    height: 100vh;
+}
+
+.main {
+    color: white;
+}
