@@ -6,7 +6,9 @@ const initialState = {
     favoriteArray: [],
     favorite: {},
     userCreated: {},
-    user: null
+    user: null,
+    errorSignIn: null,
+    errorRegister: null
 };
 
 export const rootReducer = (state = initialState, action) => {
@@ -16,6 +18,12 @@ export const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: action.payload
+            };
+
+        case actions.ERROR_SIGN_IN:
+            return {
+                ...state,
+                errorSignIn: action.payload
             };
 
         case actions.SIGN_OUT:
@@ -28,6 +36,12 @@ export const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userCreated: action.payload
+            };
+
+        case actions.ERROR_CREATE_USER:
+            return {
+                ...state,
+                errorRegister: action.payload
             };
 
         // movie action

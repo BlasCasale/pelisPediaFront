@@ -2,6 +2,8 @@ import axios from 'axios';
 
 export const actions = {
     SIGN_IN: "SIGN_IN",
+    ERROR_SIGN_IN: "ERROR_SIGN_IN",
+    ERROR_CREATE_USER: "ERROR_CREATE_USER",
     SIGN_OUT: "SIGN_OUT",
     CREATE_USER: "CREATE_USER",
     GET_MOVIE: "GET_MOVIE",
@@ -25,7 +27,12 @@ export const sign_in = (user) => {
                 payload: response
             });
         } catch (error) {
-            return error?.response?.data;
+            const message = error.response.data;
+            const depuredError = message.split(":")[1].split(".")[0];
+            return dispatch({
+                type: "ERROR_SIGN_IN",
+                payload: depuredError
+            });
         };
     };
 };
@@ -48,9 +55,14 @@ export const create_user = (user) => {
                 payload: response
             });
         } catch (error) {
-            return error?.response?.data;
-        }
-    }
+            const message = error.response.data;
+            const depuredError = message.split(":")[1].split(".")[0];
+            return dispatch({
+                type: "ERROR_CREATE_USER",
+                payload: depuredError
+            });
+        };
+    };
 };
 
 // acciones para las pelis

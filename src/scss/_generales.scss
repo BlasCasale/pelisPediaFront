@@ -23,10 +23,9 @@ h1,h2,h3 {
     color: $quinto;
 }
 
-#app {
+html {
     background-color: $primero;
     @include flexColCenCen;
-    height: 100vh;
 }
 
 .main {

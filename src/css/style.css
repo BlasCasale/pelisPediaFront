@@ -18,13 +18,12 @@ a {
 h1, h2, h3 {
   color: #F2F4F3; }
 
-#app {
+html {
   background-color: #0F1108;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh; }
+  align-items: center; }
 
 .main {
   color: white; }
@@ -58,3 +57,66 @@ h1, h2, h3 {
   transition: 0.7s; }
   .link:hover {
     scale: 1.1; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  margin: 20px 0px;
+  border: solid 2px #F2F4F3;
+  border-radius: 40px;
+  background-color: #312F2F; }
+  .formLegend {
+    color: #F2F4F3;
+    font-size: 22px; }
+  .formDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0px; }
+  .formLabel {
+    font-size: 17px;
+    color: #F2F4F3; }
+  .formInput {
+    font-size: 17px;
+    border: none;
+    padding: 6px;
+    border-radius: 15px; }
+    .formInputInvalid {
+      border: 4px solid #FF1B1C; }
+  .formButton {
+    border: none;
+    padding: 9px;
+    border-radius: 15px;
+    background-color: #ccc;
+    font-size: 15px;
+    font-weight: 550;
+    color: #0F1108;
+    transition: 1s; }
+    .formButton:hover {
+      background-color: #312F2F;
+      color: #F2F4F3; }
+  .formSpan {
+    color: #FF1B1C;
+    width: 200px; }
+
+.negative {
+  color: #FF1B1C;
+  font-weight: bold;
+  font-size: 16px; }
+
+@media screen and (min-width: 300px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
+
+@media screen and (min-width: 600px) {
+  header {
+    flex-direction: row; } }

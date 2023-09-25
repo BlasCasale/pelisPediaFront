@@ -9,3 +9,8 @@
     gap: $gap;
     padding: $pad;
 }
+
+@mixin widthHeight ($width, $height) {
+    width: $width;
+    height: $height;
+}

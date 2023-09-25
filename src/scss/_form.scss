@@ -1,0 +1,53 @@
+.form {
+    @include flexColCenCen;
+    @include gapPad(20px, 30px);
+    margin: 20px 0px;
+    border: solid 2px $quinto;
+    border-radius: 40px;
+    background-color: $segundo;
+    &Legend {
+        color: $quinto;
+        font-size: 22px
+    }
+    &Div {
+        @include flexColCenCen;
+        @include gapPad(5px, 10px 0px)
+    }
+    &Label {
+        font-size: 17px;
+        color: $quinto;
+    }
+    &Input {
+        font-size: 17px;
+        border: none;
+        padding: 6px;
+        border-radius: 15px;
+        &Invalid {
+            border: 4px solid $cuarto;
+        }
+    }
+    &Button {
+        border: none;
+        padding: 9px;
+        border-radius: 15px;
+        background-color: $sexto;
+        font-size: 15px;
+        font-weight: 550;
+        color: $primero;
+        transition: 1s;
+        &:hover {
+            background-color: $segundo;
+            color: $quinto;
+        }
+    }
+    &Span {
+        color: $cuarto;
+        width: 200px;
+    }
+}
+
+.negative {
+    color: $cuarto;
+    font-weight: bold;
+    font-size: 16px;
+}
