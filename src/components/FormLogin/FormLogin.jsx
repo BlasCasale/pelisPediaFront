@@ -22,7 +22,7 @@ const FormLogin = () => {
     const [style, setStyle] = useState({ mail: "", password: "" });
 
     useEffect(() => {
-        user && navigate('/main/index');
+        user && navigate('/home');
     }, [user]);
 
     const handleInput = (e) => {

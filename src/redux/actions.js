@@ -86,7 +86,7 @@ export const get_movie = (input) => {
 export const get_favorite = (UserId) => {
     return async (dispatch) => {
         try {
-            const response = await axios.get(`${URL_BASE}/favorites/getFavorites`, UserId).then((res) => res.data);
+            const response = await axios.get(`${URL_BASE}/favorites/getFavorites/${UserId}`).then((res) => res.data);
             return dispatch({
                 type: "GET_FAVORITE",
                 payload: response
@@ -100,7 +100,9 @@ export const get_favorite = (UserId) => {
 export const create_favorite = (info) => {
     return async (dispatch) => {
         try {
+            const { UserId } = info;
             const response = await axios.post(`${URL_BASE}/favorites/createFavorites`, info).then((res) => res.data);
+            get_favorite(UserId);
             return dispatch({
                 type: "CREATE_FAVORITE",
                 payload: response
@@ -114,7 +116,9 @@ export const create_favorite = (info) => {
 export const delete_favorite = (info) => {
     return async (dispatch) => {
         try {
+            const { UserId } = info;
             const response = await axios.delete(`${URL_BASE}/favorites/deleteFavorites`, info).then((res) => res.data);
+            get_favorite(UserId);
             return dispatch({
                 type: "DELETE_FAVORITE",
                 payload: response

@@ -25,9 +25,8 @@ h1,h2,h3 {
 
 html {
     background-color: $primero;
-    @include flexColCenCen;
 }
 
-.main {
-    color: white;
+#app {
+    @include flexColCenCen;
 }

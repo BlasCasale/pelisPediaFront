@@ -1,0 +1,4 @@
+.mainMovie {
+    @include flexColCenCen;
+    @include gapPad(30px, 15px)
+}
