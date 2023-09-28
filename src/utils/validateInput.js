@@ -16,6 +16,9 @@ export const validate = (input, error) => {
     if (!regExp_password.test(input.confirmPassword)) error.confirmPassword = "*La contraseña debe tener entre 8 y 16 caracteres, una mayuscula, una minuscula, un numero.";
     else error.confirmPassword = "";
 
+    if (input.password != input.confirmPassword) error.passNoMatch = "*Las contraseñas no coinciden.";
+    else error.passNoMatch = "";
+
     return error;
 };
 

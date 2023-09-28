@@ -14,11 +14,11 @@
         @include gapPad(5px, 10px 0px)
     }
     &Label {
-        font-size: 17px;
+        font-size: 15px;
         color: $quinto;
     }
     &Input {
-        font-size: 17px;
+        font-size: 15px;
         border: none;
         padding: 6px;
         border-radius: 15px;
@@ -41,6 +41,7 @@
         }
     }
     &Span {
+        font-size: 14px;
         color: $cuarto;
         width: 200px;
     }

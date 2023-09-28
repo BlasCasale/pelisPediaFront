@@ -49,7 +49,7 @@ export const sign_out = () => {
 export const create_user = (user) => {
     return async (dispatch) => {
         try {
-            const response = await axios.post(`${URL_BASE}users/createUser`, user).then((res) => res.data);
+            const response = await axios.post(`${URL_BASE}/users/createUser`, user).then((res) => res.data);
             return dispatch({
                 type: "CREATE_USER",
                 payload: response

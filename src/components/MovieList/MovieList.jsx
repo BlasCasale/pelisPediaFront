@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Movie from '../Movie/Movie';
 import { useDispatch, useSelector } from 'react-redux';
 import { get_favorite, create_favorite, delete_favorite } from '../../redux/actions';
@@ -12,9 +12,15 @@ const MovieList = ({ movies }) => {
 
     const user = useSelector((state) => state.user);
 
+    const favorite = useSelector((state) => state.favorite)
+
     const dispatch = useDispatch();
 
-    dispatch(get_favorite(user.id));
+    useEffect(() => {
+        dispatch(get_favorite(user.id));
+    }, [favorite])
+
+    console.log(favoriteArray)
 
     return (
         <>
