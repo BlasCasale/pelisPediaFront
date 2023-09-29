@@ -100,9 +100,8 @@ export const get_favorite = (UserId) => {
 export const create_favorite = (info) => {
     return async (dispatch) => {
         try {
-            const { UserId } = info;
             const response = await axios.post(`${URL_BASE}/favorites/createFavorites`, info).then((res) => res.data);
-            get_favorite(UserId);
+            console.log(response);
             return dispatch({
                 type: "CREATE_FAVORITE",
                 payload: response
@@ -116,9 +115,9 @@ export const create_favorite = (info) => {
 export const delete_favorite = (info) => {
     return async (dispatch) => {
         try {
-            const { UserId } = info;
-            const response = await axios.delete(`${URL_BASE}/favorites/deleteFavorites`, info).then((res) => res.data);
-            get_favorite(UserId);
+            const { UserId, imdbID } = info;
+            const response = await axios.delete(`${URL_BASE}/favorites/deleteFavorites`, { data: { UserId, imdbID } }).then((res) => res.data);
+            console.log(response);
             return dispatch({
                 type: "DELETE_FAVORITE",
                 payload: response

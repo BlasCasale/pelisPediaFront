@@ -1,26 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Movie from '../Movie/Movie';
 import { useDispatch, useSelector } from 'react-redux';
-import { get_favorite, create_favorite, delete_favorite } from '../../redux/actions';
+import { create_favorite, delete_favorite } from '../../redux/actions';
 import { useRedirectHome } from '../../hooks/useRedirectHome';
 
-const MovieList = ({ movies }) => {
+const MovieList = ({ movies, user }) => {
 
     useRedirectHome();
 
-    const favoriteArray = useSelector((state) => state.favoriteArray);
-
-    const user = useSelector((state) => state.user);
-
-    const favorite = useSelector((state) => state.favorite)
-
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(get_favorite(user.id));
-    }, [favorite])
-
-    console.log(favoriteArray)
+    const favoriteArray = useSelector((state) => state.favoriteArray);
 
     return (
         <>
@@ -35,7 +25,7 @@ const MovieList = ({ movies }) => {
                     if (like) style = true;
                     else style = false;
 
-                    return <Movie key={movie.imdbID} {...movie} style={style} create_favorite={create_favorite} delete_favorite={delete_favorite} UserId={user.id} />
+                    return <Movie key={movie.imdbID} {...movie} style={style} dispatch={dispatch} create_favorite={create_favorite} delete_favorite={delete_favorite} UserId={user.id} />
                 })
             }
         </>
