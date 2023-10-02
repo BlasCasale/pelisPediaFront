@@ -27,11 +27,10 @@ export const sign_in = (user) => {
                 payload: response
             });
         } catch (error) {
-            const message = error.response.data;
-            const depuredError = message.split(":")[1].split(".")[0];
+            const message = "El mail y contraseña no coinciden"
             return dispatch({
                 type: "ERROR_SIGN_IN",
-                payload: depuredError
+                payload: message
             });
         };
     };

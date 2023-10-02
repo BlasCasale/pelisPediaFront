@@ -5,6 +5,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        width: 100%;
         @include gapPad(60px, 40px 0px);
         background-color: $alternativo;
     }
