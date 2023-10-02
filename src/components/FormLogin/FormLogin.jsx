@@ -54,7 +54,7 @@ const FormLogin = () => {
             <legend className='formLegend'>Iniciar sesión</legend>
             <div className='formDiv'>
                 <label htmlFor="mail" className='formLabel'>Mail:</label>
-                <input type="text" id='mail' name="mail" className={`formInput ${style.mail}`} onChange={handleInput} value={input.mail} />
+                <input type="email" id='mail' name="mail" className={`formInput ${style.mail}`} onChange={handleInput} value={input.mail} />
                 <span className='formSpan'>{errorInput.mail}</span>
             </div>
             <div className='formDiv'>

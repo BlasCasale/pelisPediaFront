@@ -68,7 +68,7 @@ const FormRegister = () => {
 
       <div className='formDiv'>
         <label htmlFor="mail" className='formLabel'>Mail:</label>
-        <input type="text" id='mail' name='mail' value={input.mail} className={`formInput ${style.mail}`} onChange={handleInput} />
+        <input type="email" id='mail' name='mail' value={input.mail} className={`formInput ${style.mail}`} onChange={handleInput} />
         <span className='formSpan'>{errorInput.mail}</span>
       </div>
 
