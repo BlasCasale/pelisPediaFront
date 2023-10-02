@@ -1,0 +1,8 @@
+footer {
+    @include flexColCenCen;
+    @include gapPad(10px, 10px 5px);
+    border: solid 2px $sexto;
+    background-color: $quinto;
+    margin: 20px 0px;
+    border-radius: 25px; 
+}
