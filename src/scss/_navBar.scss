@@ -18,13 +18,16 @@
         }
     }
 
-    .linkNav {
-        color: $quinto;
-        font-size: 24px;
+    .btnSignOut {
+        background-color: $quinto;
+        color: $segundo;
         transition: 0.7s;
-    
+        border: none;
+        padding: 6px;
+        border-radius: 25px;
         &:hover {
-            scale: 1.1;
+            background-color: $sexto;
+            color: $primero;
         }
     }
 }

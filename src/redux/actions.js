@@ -12,7 +12,7 @@ export const actions = {
     DELETE_FAVORITE: "DELETE_FAVORITE"
 };
 
-const URL_BASE = "http://localhost:3001";
+const URL_BASE = "https://pelispedia-production.up.railway.app";
 
 export const RESET = "RESET";
 
@@ -101,7 +101,6 @@ export const create_favorite = (info) => {
     return async (dispatch) => {
         try {
             const response = await axios.post(`${URL_BASE}/favorites/createFavorites`, info).then((res) => res.data);
-            console.log(response);
             return dispatch({
                 type: "CREATE_FAVORITE",
                 payload: response
@@ -117,7 +116,6 @@ export const delete_favorite = (info) => {
         try {
             const { UserId, imdbID } = info;
             const response = await axios.delete(`${URL_BASE}/favorites/deleteFavorites`, { data: { UserId, imdbID } }).then((res) => res.data);
-            console.log(response);
             return dispatch({
                 type: "DELETE_FAVORITE",
                 payload: response

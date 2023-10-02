@@ -13,7 +13,7 @@ const MovieList = ({ movies, user }) => {
     const favoriteArray = useSelector((state) => state.favoriteArray);
 
     return (
-        <>
+        <main className='layout'>
             {
                 movies.map((movie) => {
                     let style
@@ -25,10 +25,10 @@ const MovieList = ({ movies, user }) => {
                     if (like) style = true;
                     else style = false;
 
-                    return <Movie key={movie.imdbID} {...movie} style={style} dispatch={dispatch} create_favorite={create_favorite} delete_favorite={delete_favorite} UserId={user.id} />
+                    return <Movie key={movie.imdbID} {...movie} style={style} dispatch={dispatch} create_favorite={create_favorite} delete_favorite={delete_favorite} UserId={user && user.id} />
                 })
             }
-        </>
+        </main>
     );
 };
 

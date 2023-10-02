@@ -10,26 +10,28 @@ const NavBar = () => {
 
     return (
         <>
-            {
-                user &&
-                <header>
-                    <NavLink to={"/home"}><h1>PelisPedia</h1></NavLink>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link className='linkNav' to={"/home"}>Inicio</Link>
-                            </li>
-                            <li>
-                                <Link className='linkNav' to={"/favorites"}>Favoritos</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div>
-                        <span>{user.name} {user.last_name}</span>
-                        <button onClick={() => dispatch(sign_out())}>Cerrar sesión</button>
-                    </div>
-                </header>
-            }
+            <header>
+                <NavLink to={"/home"}><h1>PelisPedia</h1></NavLink>
+                {
+                    user &&
+                    <>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <Link className='link' to={"/home"}>Inicio</Link>
+                                </li>
+                                <li>
+                                    <Link className='link' to={"/favorites"}>Favoritos</Link>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div>
+                            <span>{user.name} {user.last_name}</span>
+                            <button className='btnSignOut' onClick={() => dispatch(sign_out())}>Cerrar sesión</button>
+                        </div>
+                    </>
+                }
+            </header>
         </>
     );
 };

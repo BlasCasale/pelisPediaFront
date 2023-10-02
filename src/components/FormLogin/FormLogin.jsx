@@ -59,7 +59,7 @@ const FormLogin = () => {
             </div>
             <div className='formDiv'>
                 <label htmlFor="password" className='formLabel'>Contraseña:</label>
-                <input type="text" id='password' name="password" className={`formInput ${style.password}`} onChange={handleInput} value={input.password} />
+                <input type="password" id='password' name="password" className={`formInput ${style.password}`} onChange={handleInput} value={input.password} />
                 <span className='formSpan'>{errorInput.password}</span>
             </div>
             <button type="submit" className='formButton'>Iniciar sesión</button>

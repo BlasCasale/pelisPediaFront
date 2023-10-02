@@ -74,13 +74,13 @@ const FormRegister = () => {
 
       <div className='formDiv'>
         <label htmlFor="password" className='formLabel'>Contraseña:</label>
-        <input type="text" id='password' name='password' value={input.password} className={`formInput ${style.password}`} onChange={handleInput} />
+        <input type="password" id='password' name='password' value={input.password} className={`formInput ${style.password}`} onChange={handleInput} />
         <span className='formSpan'>{errorInput.password}</span>
       </div>
 
       <div className='formDiv'>
         <label htmlFor="confirmPassword" className='formLabel'>Repetir contraseña:</label>
-        <input type="text" id='confirmPassword' name='confirmPassword' value={input.confirmPassword} className={`formInput ${style.confirmPassword}`} onChange={handleInput} />
+        <input type="password" id='confirmPassword' name='confirmPassword' value={input.confirmPassword} className={`formInput ${style.confirmPassword}`} onChange={handleInput} />
         <span className='formSpan'>{errorInput.confirmPassword}</span>
       </div>
 

@@ -18,6 +18,11 @@ a {
 h1, h2, h3 {
   color: #F2F4F3; }
 
+h1 {
+  transition: 1s; }
+  h1:hover {
+    scale: 1.05; }
+
 html {
   background-color: #0F1108; }
 
@@ -27,37 +32,40 @@ html {
   justify-content: center;
   align-items: center; }
 
-.landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 50px 20px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 380px;
-  border-radius: 50px;
-  border: solid 3px #ccc;
-  background: linear-gradient(135deg, #312f2f 32%, #514c4c 88% 100%); }
-  .landingWelcome {
-    font-size: 33px; }
-  .landingBox {
+@media screen and (min-width: 300px) {
+  .landing {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 10px 0px; }
-  .landingTitle {
-    font-size: 28px; }
-
-.link {
-  color: #F2F4F3;
-  font-size: 24px;
-  transition: 0.7s; }
-  .link:hover {
-    scale: 1.1; }
+    gap: 30px;
+    padding: 50px 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    border: solid 3px #ccc;
+    background: linear-gradient(135deg, #312f2f 32%, #514c4c 88% 100%); }
+    .landingWelcome {
+      font-size: 33px;
+      width: 300px;
+      text-align: center; }
+    .landingBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0px; }
+    .landingTitle {
+      font-size: 28px;
+      width: 350px;
+      text-align: center; }
+  .link {
+    color: #F2F4F3;
+    font-size: 24px;
+    transition: 0.7s; }
+    .link:hover {
+      scale: 1.1; } }
 
 .form {
   display: flex;
@@ -135,12 +143,16 @@ html {
       gap: 10px; }
       header div span {
         color: #F2F4F3; }
-  .linkNav {
-    color: #F2F4F3;
-    font-size: 24px;
-    transition: 0.7s; }
-    .linkNav:hover {
-      scale: 1.1; } }
+  .btnSignOut {
+    background-color: #F2F4F3;
+    color: #312F2F;
+    transition: 0.7s;
+    border: none;
+    padding: 6px;
+    border-radius: 25px; }
+    .btnSignOut:hover {
+      background-color: #ccc;
+      color: #0F1108; } }
 
 @media screen and (min-width: 600px) {
   header {
@@ -156,7 +168,82 @@ html {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 15px; }
+  padding: 15px 0px; }
 
-.card {
-  background-color: white; }
+.input {
+  font-size: 15px;
+  border: none;
+  padding: 6px;
+  border-radius: 15px; }
+
+@media screen and (min-width: 300px) {
+  .layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 40px 0px;
+    background-color: #141414; } }
+
+@media screen and (min-width: 300px) {
+  .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 5px;
+    transition: 0.8s;
+    width: 290px;
+    height: 650px;
+    border-radius: 25px; }
+    .card:hover {
+      scale: 1.02; }
+    .cardImg {
+      width: 270px;
+      height: 450px;
+      transition: 0.5s;
+      border-radius: 30px; }
+      .cardImg:hover {
+        scale: 1.02; }
+    .cardP {
+      font-size: 1.14rem; }
+    .cardBtn {
+      border: none;
+      border-radius: 25px;
+      width: 60px;
+      height: 60px;
+      background-color: transparent;
+      transition: 0.6s; }
+      .cardBtn:hover {
+        scale: 1.15; }
+    .cardContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; }
+      .cardContainerType {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; }
+  .h3Title {
+    color: #0F1108;
+    font-size: 1.2rem; } }
+
+@media screen and (min-width: 620px) {
+  .card {
+    flex-direction: row;
+    width: 400px;
+    height: 400px; }
+    .cardImg {
+      width: 280px;
+      height: 380px; }
+    .cardContainer {
+      height: 370px;
+      justify-content: space-around; } }

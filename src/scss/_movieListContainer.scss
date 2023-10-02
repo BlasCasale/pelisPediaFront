@@ -1,4 +1,11 @@
 .mainMovie {
     @include flexColCenCen;
-    @include gapPad(30px, 15px)
+    @include gapPad(30px, 15px 0px)
+}
+
+.input {
+    font-size: 15px;
+    border: none;
+    padding: 6px;
+    border-radius: 15px;
 }

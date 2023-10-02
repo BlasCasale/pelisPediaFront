@@ -23,6 +23,13 @@ h1,h2,h3 {
     color: $quinto;
 }
 
+h1 {
+    transition: 1s;
+    &:hover {
+        scale: 1.05;
+    }
+}
+
 html {
     background-color: $primero;
 }

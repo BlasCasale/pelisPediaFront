@@ -27,7 +27,7 @@ const MovieListContainer = () => {
     return (
         <main className='mainMovie'>
             <h3>ESCRIBAN ACA ABAJO</h3>
-            <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+            <input className='input' type="text" value={input} onChange={(e) => setInput(e.target.value)} />
 
             {
                 movies != undefined ?
