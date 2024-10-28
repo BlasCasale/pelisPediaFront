@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { sign_guest } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
 
 const Landing = () => {
+
+  const dispatch = useDispatch()
+
+  const connect = () => dispatch(sign_guest());
 
   return (
     <section className='landing' >
@@ -20,7 +25,7 @@ const Landing = () => {
       </div>
 
       <div className='landingBox'>
-        <button className='buttonGuest' onClick={() => sign_guest()}>Invitado</button>
+        <button className='buttonGuest' onClick={connect}>Invitado</button>
       </div>
 
     </section >
