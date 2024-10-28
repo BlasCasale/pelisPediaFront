@@ -1,5 +1,6 @@
 html {
     font-size: 62, 5%;
+    background-color: $primero;
 }
 
 * {
@@ -19,19 +20,22 @@ a {
     text-decoration: none;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     color: $quinto;
 }
 
 h1 {
     transition: 1s;
+
     &:hover {
         scale: 1.05;
     }
 }
 
-html {
-    background-color: $primero;
+ul li {
+    list-style: none;
 }
 
 #app {

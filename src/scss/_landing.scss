@@ -36,4 +36,18 @@
         }
     }
 
+    .buttonGuest {
+        padding: 10px;
+        border: 15px;
+        font-size: 24px;
+        color: white;
+        border: none;
+        background: none;
+        transition: 0.7s;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
 }

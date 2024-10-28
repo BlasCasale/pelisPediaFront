@@ -26,6 +26,12 @@ export const rootReducer = (state = initialState, action) => {
                 errorSignIn: action.payload
             };
 
+        case actions.SIGN_GUEST:
+            return {
+                ...state,
+                user: action.payload
+            }
+            
         case actions.SIGN_OUT:
             return {
                 ...state,

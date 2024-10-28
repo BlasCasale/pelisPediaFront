@@ -1,7 +1,10 @@
 import axios from 'axios';
+const PASS = import.meta.env.VITE_PASS
+const MAIL = import.meta.env.VITE_MAIL
 
 export const actions = {
     SIGN_IN: "SIGN_IN",
+    SIGN_GUEST: "SIGN_GUEST",
     ERROR_SIGN_IN: "ERROR_SIGN_IN",
     ERROR_CREATE_USER: "ERROR_CREATE_USER",
     SIGN_OUT: "SIGN_OUT",
@@ -35,6 +38,29 @@ export const sign_in = (user) => {
         };
     };
 };
+
+export const sign_guest = () => {
+    const guest = {
+        mail: MAIL,
+        password: PASS
+    }
+
+    return async (dispatch) => {
+        try {
+            const response = await axios.post(`${URL_BASE}/users/getUser`, guest).then((res) => res.data);
+            return dispatch({
+                type: "SIGN_GUEST",
+                payload: response
+            });
+        } catch (error) {
+            const message = "El mail y contraseña no coinciden"
+            return dispatch({
+                type: "ERROR_SIGN_IN",
+                payload: message
+            });
+        };
+    };
+}
 
 export const sign_out = () => {
     return (dispatch) => {
