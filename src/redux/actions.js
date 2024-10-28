@@ -12,7 +12,7 @@ export const actions = {
     DELETE_FAVORITE: "DELETE_FAVORITE"
 };
 
-const URL_BASE = "https://pelispedia-production.up.railway.app";
+const URL_BASE = "https://pelispedia.onrender.com";
 
 export const RESET = "RESET";
 
