@@ -9,4 +9,8 @@ export const useRedirectHome = () => {
     useEffect(() => {
         !user && navigate('/')
     }, [user])
+
+    useEffect(() => {
+        user && navigate("/home")
+    }, [user])
 };
