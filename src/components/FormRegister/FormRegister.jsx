@@ -18,8 +18,6 @@ const FormRegister = () => {
 
   const [errorInput, setErrorInput] = useState({ name: "", last_name: "", mail: "", password: "", confirmPassword: "", passNoMatch: "" });
 
-  const [response, setResponse] = useState("");
-
   const [style, setStyle] = useState({ name: "", last_name: "", mail: "", password: "", confirmPassword: "" });
 
   const handleInput = (e) => {

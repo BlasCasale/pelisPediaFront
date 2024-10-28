@@ -2,11 +2,14 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { sign_out } from '../../redux/actions';
+import { useRedirectHome } from '../../hooks/useRedirectHome';
 
 const NavBar = () => {
     const user = useSelector((state) => state.user);
 
     const dispatch = useDispatch();
+
+    useRedirectHome()
 
     return (
         <>
